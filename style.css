@@ -1,0 +1,49 @@
+/* EarnScroll site: support + privacy. Colours from the app (src/theme). */
+:root {
+  --bg: #ECEEEA;
+  --card: #FFFFFF;
+  --text: #15171C;
+  --muted: #5D6470;
+  --line: #D6DAD3;
+  --accent: #2E4BFF;
+  --sticker: #FFD23F;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101216;
+    --card: #1A1D23;
+    --text: #EEF0F3;
+    --muted: #9AA1AC;
+    --line: #2B2F37;
+    --accent: #7088FF;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 'Onest', system-ui, -apple-system, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
+h1, h2 { font-family: 'Unbounded', system-ui, sans-serif; line-height: 1.2; }
+h1 { font-size: 30px; margin: 0 0 8px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 20px 0 4px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.hero { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.hero img { width: 72px; height: 72px; border-radius: 18px; }
+.card { background: var(--card); border-radius: 18px; padding: 20px; margin: 16px 0; }
+.card.wallet { background: #2E4BFF; color: #FFFFFF; }
+.card.wallet a { color: #FFFFFF; }
+.sticker {
+  display: inline-block; background: var(--sticker); color: #15171C;
+  font-weight: 700; font-size: 14px; padding: 4px 10px; border-radius: 10px;
+  transform: rotate(-3deg);
+}
+nav { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0 0; font-weight: 600; }
+footer { margin-top: 40px; font-size: 14px; color: var(--muted); }
